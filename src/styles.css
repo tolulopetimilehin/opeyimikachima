@@ -25,6 +25,7 @@
   --color-rose: var(--rose);
   --color-sage: var(--sage);
   --color-surface: var(--surface);
+  --color-dialog-backdrop: var(--dialog-backdrop);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -89,6 +90,7 @@
   --sage: oklch(0.57 0.054 150);
   --rose: oklch(0.59 0.092 32);
   --hero-foreground: oklch(0.99 0.004 100);
+  --dialog-backdrop: oklch(0.13 0.02 160 / 75%);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.87 0.012 240);
@@ -163,6 +165,8 @@ body { letter-spacing: 0; }
 .invitation-hero { position: relative; isolation: isolate; overflow: hidden; }
 .invitation-hero::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, oklch(0.15 0.025 160 / 72%), oklch(0.15 0.025 160 / 21%) 70%), linear-gradient(0deg, oklch(0.15 0.025 160 / 60%), transparent 48%); }
 .hero-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; animation: photo-breathe 24s ease-in-out infinite alternate; }
+.story-frame { aspect-ratio: 3 / 4; }
+.story-shade { background: linear-gradient(0deg, oklch(0.08 0.01 160 / 94%) 0%, oklch(0.08 0.01 160 / 72%) 28%, transparent 67%); }
 .invitation-card { background: var(--card); border: 1px solid var(--border); box-shadow: 0 16px 50px -36px oklch(0.23 0.04 220 / 40%); }
 .field { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: .85rem 1rem; outline: none; color: var(--foreground); transition: border-color .2s, box-shadow .2s; }
 .field:focus { border-color: var(--primary); box-shadow: 0 0 0 3px oklch(0.57 0.054 150 / 16%); }

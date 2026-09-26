@@ -11,3 +11,4 @@
 
 - Keep the wedding invitation on the index route as one scrolling experience, with wedding copy in `src/lib/wedding.ts`; this preserves a single source of truth for event details.
 - Save public RSVP submissions through a validated server function into a write-only RLS table; guests must never be able to read attendee names or access codes.
+- Store uploaded couple photographs as CDN asset pointers in `src/assets` and use them in the story; this avoids committing binary media while preserving the guests' real photos.
