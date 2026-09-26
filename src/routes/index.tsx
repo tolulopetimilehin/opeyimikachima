@@ -18,6 +18,8 @@ export const Route = createFileRoute("/")({
     { property: "og:description", content: "Celebrate with us at RCCG The Berean Centre, Ojota, Lagos. November 28, 2026 at 11 AM." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
+    { property: "og:image", content: `https://chimaopeyimika.lovable.app${storyTwo.url}` },
+    { name: "twitter:image", content: `https://chimaopeyimika.lovable.app${storyTwo.url}` },
   ] }),
   component: WeddingPage,
 });
@@ -74,6 +76,15 @@ function RsvpForm() {
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem("wedding-rsvp") ?? "null");
+      if (saved?.code && saved?.name && saved?.choice) {
+        setName(saved.name); setEmail(saved.email ?? ""); setChoice(saved.choice); setCode(saved.code);
+      }
+    } catch { /* ignore */ }
+  }, []);
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!choice || !name.trim() || pending) return;
@@ -81,6 +92,7 @@ function RsvpForm() {
     setPending(true);
     try {
       const result = await submitRsvp({ data: { name: name.trim(), email: email.trim(), response: choice, website } });
+      try { window.localStorage.setItem("wedding-rsvp", JSON.stringify({ name: name.trim(), email: email.trim(), choice, code: result.accessCode })); } catch { /* ignore */ }
       setCode(result.accessCode);
       setConfirmationOpen(true);
     } catch {
