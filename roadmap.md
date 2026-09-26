@@ -1,0 +1,3 @@
+- [ ] Update wedding date, time, location, directions, programme, FAQ, and remove gift page and long dashes.
+- [ ] Add four supplied photos to the scrolling story with readable text overlays.
+- [ ] Show a copyable access code in an RSVP confirmation pop-up and verify the flow on desktop and mobile.
