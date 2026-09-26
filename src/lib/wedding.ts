@@ -16,12 +16,12 @@ export const wedding = {
     { time: "11:00 AM", title: "Holy Matrimony", note: "RCCG The Berean Centre" },
     { time: "2:00 PM", title: "Reception", note: "Please be on time" },
   ],
-  dressCode: "Come in your black tie for the gents and your church dress for the ladies. The reception is held in a garden, so please wear appropriate footwear.",
+  dressCode: "Come in your black tie for the gents and your church dress for the ladies.",
   hashtag: "#ChimaAndOpe",
   faqs: [
     { q: "How do I get to the venue?", a: "The ceremony is at RCCG The Berean Centre, 39/41 Ogudu Road, Ojota, Lagos, Nigeria. Use the directions link above to open Google Maps." },
     { q: "What safety precautions are in place?", a: "We've limited the number of guests for your safety and comfort. If you're feeling unwell, please skip the ceremony, we totally understand and can celebrate another time." },
-    { q: "What is the dress code?", a: "Come in your black tie for the gents and your church dress for the ladies, and make sure you're comfortable! The reception will be held in a garden, so please wear the appropriate footwear." },
+    { q: "What is the dress code?", a: "Black tie for the gents and church dress for the ladies. Please wear something comfortable." },
     { q: "Can I bring a guest?", a: "Our wedding is strictly by invitation as we may not be able to accommodate additional plus-ones. Thank you for understanding. 🤍" },
   ],
 };
