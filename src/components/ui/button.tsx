@@ -16,6 +16,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        invitation: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-none",
+        choice: "border border-border bg-card text-foreground hover:border-primary rounded-md shadow-none data-[selected=true]:border-primary data-[selected=true]:bg-primary data-[selected=true]:text-primary-foreground",
+        iconSoft: "border border-border bg-card text-foreground hover:bg-accent rounded-full shadow-none",
       },
       size: {
         default: "h-9 px-4 py-2",
