@@ -14,7 +14,7 @@ export const wedding = {
   ],
   programme: [
     { time: "11:00 AM", title: "Holy Matrimony", note: "RCCG The Berean Centre" },
-    { time: "2:00 PM", title: "Reception", note: "Please be on time" },
+    { time: "2:00 PM", title: "Reception", note: "Please be on time. Same place at RCCG The Berean Centre" },
   ],
   dressCode: "Come in your black tie for the gents and your church dress for the ladies.",
   hashtag: "#ChimaAndOpe",
