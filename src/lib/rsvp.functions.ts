@@ -4,7 +4,7 @@ import { z } from "zod";
 const inputSchema = z.object({
   name: z.string().trim().min(2).max(120),
   email: z.union([z.literal(""), z.string().email().max(254)]),
-  response: z.enum(["yes", "maybe", "no"]),
+  response: z.enum(["yes", "no"]),
   website: z.string().max(200).default(""),
 });
 
@@ -16,7 +16,7 @@ function createCode() {
 }
 
 export const submitRsvp = createServerFn({ method: "POST" })
-  .inputValidator((data) => inputSchema.parse(data))
+  .validator((data) => inputSchema.parse(data))
   .handler(async ({ data }) => {
     if (data.website) throw new Error("Unable to send your RSVP.");
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
