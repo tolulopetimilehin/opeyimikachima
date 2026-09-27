@@ -8,6 +8,13 @@
       "when": 1790427010871,
       "tag": "0000_create_wedding_rsvps",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790503229231,
+      "tag": "0001_rsvp_yes_no_only",
+      "breakpoints": true
     }
   ]
 }
