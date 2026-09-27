@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
   component: WeddingPage,
 });
 
-type Choice = "yes" | "maybe" | "no";
+type Choice = "yes" | "no";
 
 function useReveal() {
   useEffect(() => {
@@ -71,6 +71,7 @@ function RsvpForm() {
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
   const [pending, setPending] = useState(false);
+  const [replied, setReplied] = useState<Choice | null>(null);
   const [code, setCode] = useState<string | null>(null);
   const [confirmationOpen, setConfirmationOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -79,8 +80,9 @@ function RsvpForm() {
   useEffect(() => {
     try {
       const saved = JSON.parse(window.localStorage.getItem("wedding-rsvp") ?? "null");
-      if (saved?.code && saved?.name && saved?.choice) {
-        setName(saved.name); setEmail(saved.email ?? ""); setChoice(saved.choice); setCode(saved.code);
+      if (saved?.name && (saved?.choice === "yes" || saved?.choice === "no")) {
+        setName(saved.name); setEmail(saved.email ?? ""); setChoice(saved.choice); setReplied(saved.choice);
+        if (saved.choice === "yes" && saved?.code) setCode(saved.code);
       }
     } catch { /* ignore */ }
   }, []);
@@ -92,14 +94,25 @@ function RsvpForm() {
     setPending(true);
     try {
       const result = await submitRsvp({ data: { name: name.trim(), email: email.trim(), response: choice, website } });
-      try { window.localStorage.setItem("wedding-rsvp", JSON.stringify({ name: name.trim(), email: email.trim(), choice, code: result.accessCode })); } catch { /* ignore */ }
-      setCode(result.accessCode);
-      setConfirmationOpen(true);
+      try {
+        const saved = choice === "yes"
+          ? { name: name.trim(), email: email.trim(), choice, code: result.accessCode }
+          : { name: name.trim(), email: email.trim(), choice };
+        window.localStorage.setItem("wedding-rsvp", JSON.stringify(saved));
+      } catch { /* ignore */ }
+      setCode(choice === "yes" ? result.accessCode : null);
+      setReplied(choice);
+      if (choice === "yes") setConfirmationOpen(true);
     } catch {
       setError("Your RSVP couldn't be sent. Please try again.");
     } finally {
       setPending(false);
     }
+  }
+
+  function changeResponse() {
+    setReplied(null); setCode(null); setChoice(null);
+    try { window.localStorage.removeItem("wedding-rsvp"); } catch { /* ignore */ }
   }
 
   async function copyCode() {
