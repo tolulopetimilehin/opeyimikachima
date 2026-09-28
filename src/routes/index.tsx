@@ -12,7 +12,7 @@ import storyFour from "@/assets/IMG_7421.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Opeyemi & Chima | November 28, 2026" },
+    { title: "Opeyimika & Chima | November 28, 2026" },
     { name: "description", content: "Celebrate Opeyemi and Chima at RCCG The Berean Centre, Ojota, Lagos on November 28, 2026 at 11 AM. Send your RSVP." },
     { property: "og:title", content: "Opeyemi & Chima | November 28, 2026" },
     { property: "og:description", content: "Celebrate with us at RCCG The Berean Centre, Ojota, Lagos. November 28, 2026 at 11 AM." },
@@ -181,6 +181,6 @@ function WeddingPage() {
      <section className="bg-background py-20 lg:py-28"><div data-reveal className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16"><p className="eyebrow text-rose">04 / What to wear</p><h2 className="font-display mt-3 text-4xl sm:text-5xl">Come as your <em>lovely</em> self.</h2><p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">{wedding.dressCode}</p><div className="mt-7 flex flex-wrap gap-2"><span className="rounded-full bg-secondary px-4 py-2 text-xs font-medium text-secondary-foreground">Black tie for the gents</span><span className="rounded-full bg-accent px-4 py-2 text-xs font-medium text-accent-foreground">Church dress for the ladies</span></div></div></section>
 
     <section className="bg-surface py-20"><div className="mx-auto max-w-3xl px-6 sm:px-10" data-reveal><p className="eyebrow text-rose">Good to know</p><h2 className="font-display mt-3 text-5xl">A few little details.</h2><div className="mt-9 divide-y divide-border border-t border-border">{wedding.faqs.map((faq) => <details key={faq.q} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium marker:hidden">{faq.q}<span className="text-xl font-light text-rose transition-transform group-open:rotate-45">+</span></summary><p className="max-w-xl pt-3 text-sm leading-relaxed text-muted-foreground">{faq.a}</p></details>)}</div></div></section>
-     <footer className="px-6 py-14 text-center"><Heart className="mx-auto size-5 text-rose" strokeWidth={1.4} /><p className="font-display mt-4 text-4xl italic">Opeyemi & Chima</p><p className="eyebrow mt-3 text-muted-foreground">28 November 2026 · Lagos</p><p className="mt-3 text-sm text-muted-foreground">{wedding.hashtag}</p></footer>
+     <footer className="px-6 py-14 text-center"><Heart className="mx-auto size-5 text-rose" strokeWidth={1.4} /><p className="font-display mt-4 text-4xl italic">Opeyimika & Chima</p><p className="eyebrow mt-3 text-muted-foreground">28 November 2026 · Lagos</p><p className="mt-3 text-sm text-muted-foreground">{wedding.hashtag}</p></footer>
   </main>;
 }
