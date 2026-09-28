@@ -13,8 +13,8 @@ import storyFour from "@/assets/IMG_7421.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
     { title: "Opeyimika & Chima | November 28, 2026" },
-    { name: "description", content: "Celebrate Opeyemi and Chima at RCCG The Berean Centre, Ojota, Lagos on November 28, 2026 at 11 AM. Send your RSVP." },
-    { property: "og:title", content: "Opeyemi & Chima | November 28, 2026" },
+    { name: "description", content: "Celebrate Opeyimika and Chima at RCCG The Berean Centre, Ojota, Lagos on November 28, 2026 at 11 AM. Send your RSVP." },
+    { property: "og:title", content: "Opeyimika & Chima | November 28, 2026" },
     { property: "og:description", content: "Celebrate with us at RCCG The Berean Centre, Ojota, Lagos. November 28, 2026 at 11 AM." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
