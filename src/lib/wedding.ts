@@ -1,5 +1,5 @@
 export const wedding = {
-  bride: "Opeyemi",
+  bride: "Opeyimika",
   groom: "Chima",
   date: "2026-11-28T11:00:00+01:00",
   venue: "RCCG The Berean Centre",
