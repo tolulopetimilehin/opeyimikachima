@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { submitRsvp } from "@/lib/rsvp.functions";
 import { wedding } from "@/lib/wedding";
 import gardenHero from "@/assets/garden-hero.jpg";
-import storyOne from "@/assets/IMG_4409.jpg.asset.json";
-import storyTwo from "@/assets/IMG_4411.jpg.asset.json";
-import storyThree from "@/assets/IMG_4410.jpg.asset.json";
-import storyFour from "@/assets/IMG_7421.jpg.asset.json";
+import storyOne from "@/assets/IMG_4409.JOG";
+import storyTwo from "@/assets/IMG_4411.JPG";
+import storyThree from "@/assets/IMG_4377.JPG";
+import storyFour from "@/assets/IMG_7421.JPG";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
