@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
        { name: "description", content: "Join Opeyimika and Chima in Lagos on November 28, 2026." },
        { property: "og:title", content: "Opeyimika & Chima - Wedding Invitation" },
        { property: "og:description", content: "Join Opeyimika and Chima in Lagos on November 28, 2026." },
-      { property: "og:image", content: `https://opeyimikachima.vercel.app${storyOne}` },
+      { property: "og:image", content: `https://opeyimikachima.lovable.app${storyOne}` },
       { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "683" },
       { property: "og:image:height", content: "1024" },
