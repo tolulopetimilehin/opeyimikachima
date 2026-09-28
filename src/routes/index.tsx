@@ -18,13 +18,13 @@ export const Route = createFileRoute("/")({
     { property: "og:description", content: "Celebrate with us at RCCG The Berean Centre, Ojota, Lagos. November 28, 2026 at 11 AM." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
-    { property: "og:url", content: "https://opeyimikachima.lovable.dev/" },
-    { property: "og:image", content: `https://opeyimikachima.lovable.dev${storyOne}` },
+    { property: "og:url", content: "https://opeyimikachima.lovable.app/" },
+    { property: "og:image", content: `https://opeyimikachima.lovable.app${storyOne}` },
     { property: "og:image:type", content: "image/jpeg" },
     { property: "og:image:width", content: "683" },
     { property: "og:image:height", content: "1024" },
-    { name: "twitter:image", content: `https://opeyimikachima.lovable.dev${storyOne}` },
-  ], links: [{ rel: "canonical", href: "https://opeyimikachima.lovable.dev/" }] }),
+    { name: "twitter:image", content: `https://opeyimikachima.lovable.app${storyOne}` },
+  ], links: [{ rel: "canonical", href: "https://opeyimikachima.lovable.app/" }] }),
   component: WeddingPage,
 });
 
