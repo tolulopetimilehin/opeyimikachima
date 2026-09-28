@@ -12,15 +12,19 @@ import storyFour from "@/assets/IMG_4377.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Chima & Opeyimika | November 28, 2026" },
-    { name: "description", content: "Celebrate Chima and Opeyimika at RCCG The Berean Centre, Ojota, Lagos on November 28, 2026 at 11 AM. Send your RSVP." },
-    { property: "og:title", content: "Chima & Opeyimika | November 28, 2026" },
+    { title: "Opeyemi & Chima | November 28, 2026" },
+    { name: "description", content: "Celebrate Opeyemi and Chima at RCCG The Berean Centre, Ojota, Lagos on November 28, 2026 at 11 AM. Send your RSVP." },
+    { property: "og:title", content: "Opeyemi & Chima | November 28, 2026" },
     { property: "og:description", content: "Celebrate with us at RCCG The Berean Centre, Ojota, Lagos. November 28, 2026 at 11 AM." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
-    { property: "og:image", content: `https://chimaopeyimika.lovable.app${storyOne.url}` },
-    { name: "twitter:image", content: `https://chimaopeyimika.lovable.app${storyOne.url}` },
-  ] }),
+    { property: "og:url", content: "https://opeyimikachima.lovable.app/" },
+    { property: "og:image", content: `https://opeyimikachima.lovable.app${storyOne.url}` },
+    { property: "og:image:type", content: "image/jpeg" },
+    { property: "og:image:width", content: "683" },
+    { property: "og:image:height", content: "1024" },
+    { name: "twitter:image", content: `https://opeyimikachima.lovable.app${storyOne.url}` },
+  ], links: [{ rel: "canonical", href: "https://opeyimikachima.lovable.app/" }] }),
   component: WeddingPage,
 });
 
@@ -157,7 +161,7 @@ function WeddingPage() {
       <img src={gardenHero} width={1536} height={1024} className="hero-photo" alt="A lush garden wedding ceremony with white flowers and an ivory canopy" fetchPriority="high" />
        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-7 sm:px-10 lg:px-16"><span className="font-display text-xl italic">C <span className="text-hero-foreground/70">&</span> O</span><span className="eyebrow !text-[10px]">28 · 11 · 2026</span></div>
       <div className="mx-auto w-full max-w-7xl px-6 pb-12 sm:px-10 sm:pb-16 lg:px-16 lg:pb-20">
-        <div className="max-w-3xl"><p className="eyebrow mb-5 flex items-center gap-3 text-hero-foreground/90"><span className="h-px w-8 bg-hero-foreground/70" /> Together with our families</p><h1 className="font-display text-[clamp(4.5rem,10vw,9rem)] leading-[.78] font-medium">Chima <span className="italic font-normal">&</span><br />Opeyimika</h1><p className="mt-7 max-w-lg font-display text-2xl sm:text-3xl italic leading-tight text-hero-foreground/95">A love story worth celebrating together.</p></div>
+        <div className="max-w-3xl"><p className="eyebrow mb-5 flex items-center gap-3 text-hero-foreground/90"><span className="h-px w-8 bg-hero-foreground/70" /> Together with our families</p><h1 className="font-display text-[clamp(4.5rem,10vw,9rem)] leading-[.78] font-medium">Opeyemi <span className="italic font-normal">&</span><br />Chima</h1><p className="mt-7 max-w-lg font-display text-2xl sm:text-3xl italic leading-tight text-hero-foreground/95">A love story worth celebrating together.</p></div>
         <div className="mt-9 flex flex-wrap items-center gap-5"><a href="#rsvp" className="inline-flex h-12 items-center gap-3 rounded-full bg-card px-6 text-sm font-medium text-foreground transition-colors hover:bg-secondary">Kindly RSVP <ArrowRight className="size-4" /></a><a href="#details" className="inline-flex items-center gap-2 text-sm text-hero-foreground/90 hover:text-hero-foreground">Explore the day <ArrowDown className="size-4" /></a></div>
       </div>
     </section>
@@ -170,13 +174,13 @@ function WeddingPage() {
       <RsvpForm />
     </div>
 
-     <section className="mx-auto max-w-7xl px-6 py-24 sm:px-10 lg:px-16 lg:py-32"><div data-reveal className="mb-10 max-w-xl"><p className="eyebrow text-rose">02 / Our story</p><h2 className="font-display mt-5 text-5xl sm:text-6xl leading-[.95]">It all started<br /><em>with a video.</em></h2><span className="mt-8 block h-px w-16 bg-rose" /></div><div className="grid gap-5 md:grid-cols-2">{[storyOne, storyTwo, storyThree, storyFour].map((photo, index) => <figure key={photo.asset_id} data-reveal className="story-frame relative isolate overflow-hidden rounded-md bg-muted"><img src={photo.url} alt={["Chima and Opeyimika smiling together in a black and white portrait", "Chima and Opeyimika embracing and smiling", "Chima looking at Opeyimika as they embrace", "A joyful photo of Chima and Opeyimika laughing together"][index]} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-center" /><div className="story-shade absolute inset-0" /><figcaption className="absolute inset-x-0 bottom-0 px-6 pb-7 pt-16 text-center text-hero-foreground sm:px-9 sm:pb-10"><p className="mx-auto max-w-lg text-sm leading-relaxed sm:text-base">{wedding.story[index + 1]}</p></figcaption></figure>)}</div><p data-reveal className="font-display mt-12 text-center text-3xl italic text-foreground sm:text-4xl">“{wedding.quote}”</p></section>
+     <section className="mx-auto max-w-7xl px-6 py-24 sm:px-10 lg:px-16 lg:py-32"><div data-reveal className="mb-10 max-w-xl"><p className="eyebrow text-rose">02 / Our story</p><h2 className="font-display mt-5 text-5xl sm:text-6xl leading-[.95]">It all started<br /><em>with a video.</em></h2><span className="mt-8 block h-px w-16 bg-rose" /></div><div className="grid gap-5 md:grid-cols-2">{[storyOne, storyTwo, storyThree, storyFour].map((photo, index) => <figure key={photo.asset_id} data-reveal className="story-frame relative isolate overflow-hidden rounded-md bg-muted"><img src={photo.url} alt={["Opeyemi and Chima smiling together in a black and white portrait", "Opeyemi and Chima embracing and smiling", "Opeyemi and Chima looking at each other as they embrace", "A joyful photo of Opeyemi and Chima laughing together"][index]} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-center" /><div className="story-shade absolute inset-0" /><figcaption className="absolute inset-x-0 bottom-0 px-6 pb-7 pt-16 text-center text-hero-foreground sm:px-9 sm:pb-10"><p className="mx-auto max-w-lg text-sm leading-relaxed sm:text-base">{wedding.story[index + 1]}</p></figcaption></figure>)}</div><p data-reveal className="font-display mt-12 text-center text-3xl italic text-foreground sm:text-4xl">“{wedding.quote}”</p></section>
 
     <section className="bg-surface py-20 lg:py-28"><div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16"><div data-reveal className="mb-10 flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow text-rose">03 / The celebration</p><h2 className="font-display mt-3 text-5xl sm:text-6xl">A day to remember.</h2></div><p className="max-w-xs text-sm text-muted-foreground">From our first vows to the last dance, we can't wait to share it with you.</p></div><div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">{wedding.programme.map((item, index) => <div key={item.title} data-reveal className="invitation-card rounded-lg p-6"><span className="font-display text-3xl italic text-rose">0{index + 1}</span><div className="mt-10 border-t border-border pt-4"><p className="eyebrow text-sage">{item.time}</p><h3 className="font-display mt-2 text-3xl leading-none">{item.title}</h3><p className="mt-3 min-h-5 text-sm text-muted-foreground">{item.note || " "}</p></div></div>)}</div></div></section>
 
      <section className="bg-background py-20 lg:py-28"><div data-reveal className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16"><p className="eyebrow text-rose">04 / What to wear</p><h2 className="font-display mt-3 text-4xl sm:text-5xl">Come as your <em>lovely</em> self.</h2><p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">{wedding.dressCode}</p><div className="mt-7 flex flex-wrap gap-2"><span className="rounded-full bg-secondary px-4 py-2 text-xs font-medium text-secondary-foreground">Black tie for the gents</span><span className="rounded-full bg-accent px-4 py-2 text-xs font-medium text-accent-foreground">Church dress for the ladies</span></div></div></section>
 
     <section className="bg-surface py-20"><div className="mx-auto max-w-3xl px-6 sm:px-10" data-reveal><p className="eyebrow text-rose">Good to know</p><h2 className="font-display mt-3 text-5xl">A few little details.</h2><div className="mt-9 divide-y divide-border border-t border-border">{wedding.faqs.map((faq) => <details key={faq.q} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium marker:hidden">{faq.q}<span className="text-xl font-light text-rose transition-transform group-open:rotate-45">+</span></summary><p className="max-w-xl pt-3 text-sm leading-relaxed text-muted-foreground">{faq.a}</p></details>)}</div></div></section>
-     <footer className="px-6 py-14 text-center"><Heart className="mx-auto size-5 text-rose" strokeWidth={1.4} /><p className="font-display mt-4 text-4xl italic">Chima & Opeyimika</p><p className="eyebrow mt-3 text-muted-foreground">28 November 2026 · Lagos</p><p className="mt-3 text-sm text-muted-foreground">{wedding.hashtag}</p></footer>
+     <footer className="px-6 py-14 text-center"><Heart className="mx-auto size-5 text-rose" strokeWidth={1.4} /><p className="font-display mt-4 text-4xl italic">Opeyemi & Chima</p><p className="eyebrow mt-3 text-muted-foreground">28 November 2026 · Lagos</p><p className="mt-3 text-sm text-muted-foreground">{wedding.hashtag}</p></footer>
   </main>;
 }

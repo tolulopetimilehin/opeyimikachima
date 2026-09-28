@@ -1,5 +1,5 @@
 export const wedding = {
-  bride: "Opeyimika",
+  bride: "Opeyemi",
   groom: "Chima",
   date: "2026-11-28T11:00:00+01:00",
   venue: "RCCG The Berean Centre",
@@ -14,10 +14,10 @@ export const wedding = {
   ],
   programme: [
     { time: "11:00 AM", title: "Holy Matrimony", note: "RCCG The Berean Centre" },
-    { time: "2:00 PM", title: "Reception", note: "Please be on time. Same place at RCCG The Berean Centre" },
+    { time: "2:00 PM", title: "Reception", note: "The reception will be held at the same venue, RCCG The Berean Centre, at 2:00 PM. Please arrive on time." },
   ],
   dressCode: "Come in your black tie for the gents and your church dress for the ladies.",
-  hashtag: "#ChimaAndOpe",
+  hashtag: "#TheOCduo",
   faqs: [
     { q: "How do I get to the venue?", a: "The ceremony is at RCCG The Berean Centre, 39/41 Ogudu Road, Ojota, Lagos, Nigeria. Use the directions link above to open Google Maps." },
     { q: "What safety precautions are in place?", a: "We've limited the number of guests for your safety and comfort. If you're feeling unwell, please skip the ceremony, we totally understand and can celebrate another time." },
