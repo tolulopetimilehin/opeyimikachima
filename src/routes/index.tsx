@@ -8,7 +8,7 @@ import gardenHero from "@/assets/garden-hero.jpg";
 import storyOne from "@/assets/IMG_4409.JPG";
 import storyTwo from "@/assets/IMG_4411.JPG";
 import storyThree from "@/assets/IMG_4377.JPG";
-import storyFour from "@/assets/IMG_7421.JPG";
+import storyFour from "@/assets/IMG_7421.HEIC";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
